@@ -9,6 +9,7 @@ const PORT = 3000
 const app = express()
 
 // Session management
+// For dev purpose we are using the in memory storage
 app.use(session({
   secret: 'S3ss10nManag3m3nt!',
   resave: false,
@@ -16,9 +17,20 @@ app.use(session({
   cookie: { secure: false }
 }))
 
-// Application routes
+// Initialize session cart in a middleware
+const cartInitializer = (req, res, next) => {
+  if (req.session.cart === undefined) {
+    req.session.cart = []
+  }
+  next()
+}
+app.use(cartInitializer)
+
+// Routes
 app.get('/product', product.getProducts)
 app.get('/cart', cart.getCart)
+app.post('/cart/:id', cart.addItemToCart)
+app.delete('/cart/:id', cart.removeItemFromCart)
 
 // Run server
-app.listen(PORT, () => logger.debug(`Example app listening on port ${PORT}!`))
+app.listen(PORT, () => logger.debug(`izi-cart listening on port ${PORT}!`))

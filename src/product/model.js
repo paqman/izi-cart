@@ -8,10 +8,17 @@ const PRODUCTS = [
 ]
 
 /**
- * Return a list of every products
+ * Return the list of every products
  */
 const getProducts = () => PRODUCTS
 
+/**
+ * Return the product for the matching ID
+ * @param id id of the product
+ */
+const getProduct = id => PRODUCTS.find(p => p.id === id)
+
 module.exports = {
-  getProducts
+  getProducts,
+  getProduct
 }

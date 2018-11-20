@@ -1,4 +1,4 @@
-const URL_PREFIX = 'http://localhost:3000/cart/'
+const helper = require('../utils/helper')
 
 const productModel = require('./model')
 
@@ -11,8 +11,7 @@ const getProducts = (req, res) => {
   res.send(products.map(product => ({
     id: product.id,
     name: product.name,
-    // Add link to push one item in the cart
-    link: `${URL_PREFIX}${product.id}`
+    link: helper.getUrl(`/cart/${product.id}`) // Add link to push one item in the cart
   })))
 }
 
