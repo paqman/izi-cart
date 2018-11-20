@@ -18,7 +18,8 @@
   "author": "paqman.fr",
   "license": "MIT",
   "dependencies": {
-    "express": "^4.16.4"
+    "express": "^4.16.4",
+    "express-session": "^1.15.6"
   },
   "devDependencies": {
     "eslint": "^5.9.0",

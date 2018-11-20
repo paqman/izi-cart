@@ -4,6 +4,7 @@ describe('Product', () => {
   test('Get all products', () => request
     .get('/product')
     .expect(200)
+    .expect('Content-Type', /json/)
     .expect(({ body }) => {
       expect(body).toHaveLength(5)
     }))
