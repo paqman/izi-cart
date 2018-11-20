@@ -1,7 +1,7 @@
-const PRODUCTS = [{ id: 1, name: 'flechettes' }]
+const cartModel = require('./model')
 
 const getProducts = (req, res) => {
-  res.send(PRODUCTS)
+  res.send(cartModel.getProducts())
 }
 
 module.exports = {
