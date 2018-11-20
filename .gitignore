@@ -1,0 +1,35 @@
+# package directories
+node_modules
+
+# Logs
+logs
+npm-debug.log*
+
+# Optional npm cache directory
+.npm
+
+# Dependency directories
+/node_modules
+
+# workspace files are user-specific
+*.sublime-workspace
+
+### WebStorm/IntelliJ ###
+/.idea
+modules.xml
+*.ipr
+
+### System Files ###
+.DS_Store
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# Files that might appear in the root of a volume
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent

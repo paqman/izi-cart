@@ -1,0 +1,22 @@
+{
+  "extends": [
+    "airbnb"
+  ],
+  "plugins": [
+    "import",
+    "prettier"
+  ],
+  "globals": {
+    "__DEV__": true,
+    "Zone": true
+  },
+  "env": {
+    "jest": true
+  },
+  "rules": {
+    "comma-dangle": [1, "only-multiline"],
+    "prettier/prettier": 0,
+    "quotes": [1, "single", "avoid-escape"],
+    "semi": [1, "never"]
+  }
+}
