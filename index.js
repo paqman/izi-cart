@@ -1,8 +1,11 @@
 const express = require('express')
+
+const logger = require('./src/utils/logger')
 const cart = require('./src/routes/cart')
+
 const app = express()
 const port = 3000
 
-app.get('/', cart.getProducts)
+app.get('/products', cart.getProducts)
 
-app.listen(port, () => console.log(`Example app listening on port ${port}!`))
+app.listen(port, () => logger.debug(`Example app listening on port ${port}!`))

@@ -1,15 +1,7 @@
 {
   "extends": [
-    "airbnb"
+    "airbnb-base"
   ],
-  "plugins": [
-    "import",
-    "prettier"
-  ],
-  "globals": {
-    "__DEV__": true,
-    "Zone": true
-  },
   "env": {
     "jest": true
   },
